@@ -1,0 +1,19 @@
+#foreground {
+  align-self: end;
+  grid-row: 2;
+  grid-column: 1;
+  min-height: 100vh;
+  background: url("../img/tallTree.png") repeat-x;
+  animation: scrollBack 30s linear infinite;
+  /* animation-play-state: paused; */
+  z-index: 4;
+}
+
+@keyframes scrollBack {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 2263px 0;
+  }
+}

@@ -1,0 +1,20 @@
+#bar {
+  align-self: end;
+  grid-row: 2;
+  grid-column: 1;
+  max-height: 566.28px;
+  height: 100vh;
+  background: url("../img/trees.png") repeat-x;
+  animation: scroll 60s linear infinite;
+  z-index: 2;
+  /* animation-play-state: paused; */
+}
+
+@keyframes scroll {
+  from {
+    background-position: 493px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}

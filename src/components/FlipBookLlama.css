@@ -1,0 +1,22 @@
+div {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+  z-index: 3;
+}
+
+.flip-book {
+  display: grid;
+  justify-content: center;
+}
+
+.flip-book img {
+  grid-column: 1;
+  grid-row: 1;
+  opacity: 0;
+  width: 230px;
+}
+
+.flip-book img.active {
+  opacity: 1;
+}
