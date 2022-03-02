@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // components
 import FlipBookLlama from './FlipBookLlama';
@@ -7,39 +7,18 @@ import TallTrees from './TallTrees';
 import Moon from './Moon';
 // css
 import './Background.css';
-import Title from './Title';
 
-function Background() {
-
-  const [backgroundPlay, setBackgroundPlay] = useState("paused")
-
-  const handleBackgroundPlay = () => {
-    if(backgroundPlay === "paused"){setBackgroundPlay("running")
-      setTimeout(function() {setBackgroundPlay("paused")}, 2500)}
-      if (backgroundPlay === "running"){
-        setBackgroundPlay("running")
-      }
-  }
+function Background(props) {
 
 
-  const [LlamaPlay, setLlamaPlay] = useState(0) 
   
-  function handleLlamaPlay(){
-    if(LlamaPlay === 0){setLlamaPlay(1)
-    setTimeout(function() {setLlamaPlay(0)}, 2500)}
-    if (LlamaPlay === 1){
-      setLlamaPlay(1)
-    }
-    console.log(LlamaPlay)
-  }
 
   return (
-    <div className="Background" onWheel={() => {handleBackgroundPlay(); handleLlamaPlay();}}>
-      <Trees backgroundPlay={backgroundPlay}/>
-      <FlipBookLlama LlamaPlay={LlamaPlay}/>
+    <div className="Background">
+      <Trees backgroundPlay={props.backgroundPlay}/>
+      <FlipBookLlama LlamaPlay={props.LlamaPlay}/>
       <Moon />
-      <TallTrees backgroundPlay={backgroundPlay}/>
-      <Title />
+      <TallTrees backgroundPlay={props.backgroundPlay}/>
     </div>
   );
 }

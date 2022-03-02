@@ -9,7 +9,7 @@ const Trees = (props) => {
 
   return (
     
-      <div id='bar' style={{animationPlayState: backgroundPlay}}></div>
+      <div id='trees' style={{animationPlayState: backgroundPlay}}></div>
 
   )
 }
