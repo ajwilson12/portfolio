@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './Navigation.css';
 
 const Navigation = () => {
   return (
     <nav>
     <div id="navLogo">
-      <span className="navLogoText">A&W</span>
+      <span>A&W</span>
     </div>
     <div className="navLinks">
      <p className="navItem">ABOUT</p>
