@@ -5,7 +5,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
 }
 
 .navLinks {
@@ -22,6 +22,7 @@ nav {
   padding: 40px;
   color: whitesmoke;
   font-family: "Nunito", cursive;
+  text-decoration: none;
 }
 
 #navLogo {

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navigation.css';
+import { Link } from 'react-router-dom'
 
 const Navigation = () => {
   return (
@@ -8,8 +9,9 @@ const Navigation = () => {
       <span>A&W</span>
     </div>
     <div className="navLinks">
+     <Link className="navItem" to='/'>HOME</Link>
      <p className="navItem">ABOUT</p>
-     <p className="navItem">PROJECTS</p>
+     <Link className="navItem" to='/projects'>PROJECTS</Link>
      <p className="navItem">CONTACT</p>
     </div>
   </nav>
@@ -17,3 +19,4 @@ const Navigation = () => {
 }
 
 export default Navigation
+
