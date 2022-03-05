@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import { Routes, Route, Link, useLocation } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { Routes, Route } from "react-router-dom";
+
 
 // components
 import Background from './components/Background';
@@ -38,31 +38,17 @@ function App() {
     console.log(LlamaPlay)
   }
 
-//   const location = useLocation();
-  
-//   const Page: FC<{ to: string }> = (props) => <main><Link {...props} /></main>; // prettier-ignore
-
-// /** Page A, see App for the URL */
-// const A = () => <Page to="/b">You're on "/a": click to go to "/b"</Page>;
-// /** Page B, see App for the URL */
-// const B = () => <Page to="/a">Now on "/b": now click to go to "/a"</Page>;
-
-
 
   return (
     <div className="App">
       
      <Background backgroundPlay={backgroundPlay} LlamaPlay={LlamaPlay}/>
-     <Navigation />
-     {/* <TransitionGroup component={null}>
-      <CSSTransition key={location.key} classNames="fade" timeout={300}> */}
+     {/* <Navigation /> */}
       <Routes>
-        <Route path="/" element={<LandingPage  handleLlamaPlay={handleLlamaPlay} handleBackgroundPlay={handleBackgroundPlay}/>} />
+        <Route path="/" element={<LandingPage handleLlamaPlay={handleLlamaPlay} handleBackgroundPlay={handleBackgroundPlay}/>} />
         <Route path="/projects" element={<ProjectsPage  handleLlamaPlay={handleLlamaPlay} handleBackgroundPlay={handleBackgroundPlay}/>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      {/* </CSSTransition>
-    </TransitionGroup> */}
     </div>
   );
 }
