@@ -11,3 +11,10 @@
   overflow: hidden;
   background: linear-gradient(181.23deg, #0a1027 -15.91%, #0c1835 136.98%);
 }
+
+.ground {
+  height: 500px;
+  width: 100vw;
+  background: #000220;
+  clip-path: ellipse(50% 6% at 50% 100%);
+}

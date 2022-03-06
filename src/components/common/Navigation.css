@@ -23,6 +23,7 @@ nav {
   color: whitesmoke;
   font-family: "Nunito", cursive;
   text-decoration: none;
+  cursor: pointer;
 }
 
 #navLogo {

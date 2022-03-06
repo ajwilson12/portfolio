@@ -14,6 +14,9 @@
 /* nunito font */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+.aboutContainer,
+.contactContainer,
+.projectsContainer,
 .titleContainer {
   grid-row: 2;
   grid-column: 1;
@@ -22,16 +25,7 @@
   color: white;
   opacity: 0;
   transition: all 200ms ease-in-out;
-}
-
-.aboutContainer {
-  grid-row: 2;
-  grid-column: 1;
-  align-self: center;
-  justify-self: center;
-  color: white;
-  opacity: 0;
-  transition: all 200ms ease-in-out;
+  width: 60vw;
 }
 
 h1 {
@@ -49,4 +43,98 @@ h2 {
   font-weight: 200;
   color: #02ecd1;
   letter-spacing: 1rem;
+}
+
+/* project Page */
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectsContainer h2 {
+  margin-bottom: 80px;
+}
+
+.iconWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.iconContainer {
+  cursor: pointer;
+}
+
+.iconText {
+  margin-top: 5px;
+  padding: 5px 15px;
+  width: 100px;
+  transition: all 0.2s;
+  font-family: "Megrim", sans-serif;
+}
+
+.iconContainer:hover .iconText {
+  background: #02ecd1e5;
+  color: rgb(0, 0, 94);
+  font-weight: bolder;
+}
+
+/* project icons */
+
+.projectIconContainer {
+  cursor: pointer;
+  align-items: center;
+}
+
+.projectIconText {
+  padding: 10px 15px;
+  width: 100px;
+  transition: all 0.2s;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 40px;
+  font-size: 0.8rem;
+}
+
+.dummyIcon {
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: black;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+div.dummyIcon:hover {
+  transform: scale(1.1);
+}
+
+.react:hover ~ .iconContainer p.react {
+  background: #02ecd1e5;
+  color: rgb(0, 0, 94);
+  font-weight: bolder;
+}
+.javascript:hover ~ .iconContainer p.javascript {
+  background: #02ecd1e5;
+  color: rgb(0, 0, 94);
+  font-weight: bolder;
+}
+.sass:hover ~ .iconContainer p.sass {
+  background: #02ecd1e5;
+  color: rgb(0, 0, 94);
+  font-weight: bolder;
+}
+.wordpress:hover ~ .iconContainer p.wordpress {
+  background: #02ecd1e5;
+  color: rgb(0, 0, 94);
+  font-weight: bolder;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 80px;
 }

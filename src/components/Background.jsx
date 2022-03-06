@@ -9,16 +9,13 @@ import Moon from './Moon';
 import './Background.css';
 
 function Background(props) {
-
-
-  
-
   return (
     <div className="Background">
       <Trees backgroundPlay={props.backgroundPlay}/>
       <FlipBookLlama LlamaPlay={props.LlamaPlay}/>
-      <Moon />
+      <Moon pageIndex={props.pageIndex}/>
       <TallTrees backgroundPlay={props.backgroundPlay}/>
+      <div className='ground'></div>
     </div>
   );
 }

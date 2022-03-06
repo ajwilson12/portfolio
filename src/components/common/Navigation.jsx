@@ -5,18 +5,20 @@ const Navigation = (props) => {
   const [disabled, setDisabled] = useState("auto");
   function handleDisabled() {
     setDisabled("none")
-    setTimeout(() => {setDisabled("auto")}, 500)
+    setTimeout(() => {setDisabled("auto")}, 500) 
   }
+  
+
   return (
     <nav>
     <div id="navLogo">
       <span>A&W</span>
     </div>
     <div className="navLinks">
-     <p className="navItem" style={{pointerEvents: disabled}} onClick={() => {props.NavigateTo(1); handleDisabled()}}>HOME</p>
-     <p className="navItem" style={{pointerEvents: disabled}} onClick={() => {props.NavigateTo(2); handleDisabled()}}>ABOUT</p>
-     <p className="navItem" style={{pointerEvents: disabled}} onClick={() => {props.NavigateTo(3); handleDisabled()}}>PROJECTS</p>
-     <p className="navItem" style={{pointerEvents: disabled}} onClick={() => {props.NavigateTo(4); handleDisabled()}}>CONTACT</p>
+     <p className="navItem" style={{pointerEvents: disabled}} onClick={() => {props.NavigateTo(1); handleDisabled();props.handleBackgroundPlay(); props.handleLlamaPlay();}}>HOME</p>
+     <p className="navItem" style={{pointerEvents: disabled}} onClick={() => {props.NavigateTo(2); handleDisabled();props.handleBackgroundPlay(); props.handleLlamaPlay();}}>ABOUT</p>
+     <p className="navItem" style={{pointerEvents: disabled}} onClick={() => {props.NavigateTo(3); handleDisabled();props.handleBackgroundPlay(); props.handleLlamaPlay();}}>PROJECTS</p>
+     <p className="navItem" style={{pointerEvents: disabled}} onClick={() => {props.NavigateTo(4); handleDisabled();props.handleBackgroundPlay(); props.handleLlamaPlay();}}>CONTACT</p>
     </div>
   </nav>
   )
