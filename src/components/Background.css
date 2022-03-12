@@ -9,7 +9,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(181.23deg, #0a1027 -15.91%, #0c1835 136.98%);
+  /* background: url("../img/mountains.png"); */
 }
 
 .ground {

@@ -2,32 +2,34 @@ import React, {Fragment, useState, useEffect} from 'react'
 import './Moon.css'
 const Moon = (props) => {
 
-  const [showPhoto, setShowPhoto] = useState(0)
   const [moveMoon, setMoveMoon] = useState("100px")
-  const [moonSize, setMoonSize] = useState("180px")
-  useEffect(() => {
-    if(props.pageIndex === 2) {
-      setShowPhoto(1)
-    } else {
-      setShowPhoto(0)
-    }
-  }, [props.pageIndex, showPhoto])
+  const [moonRaysOpacity, setMoonRaysOpacity] = useState("0.6")
   
   useEffect(() => {
-    if(props.pageIndex === 3) {
-      setMoveMoon("90px")
-      setMoonSize("100px")
-    } else {
+    if(props.pageIndex === 1) {
       setMoveMoon("100px")
-      setMoonSize("180px")
-    }
-  }, [props.pageIndex, moveMoon])
+      setMoonRaysOpacity("0.6")
+    } 
+    if(props.pageIndex === 2) {
+      setMoveMoon("150px")
+      setMoonRaysOpacity("0.6")
+    } 
+    if(props.pageIndex === 3) {
+      setMoveMoon("200px")
+      setMoonRaysOpacity("0.4")
+    } 
+    if(props.pageIndex === 4) {
+      setMoveMoon("290px")
+      setMoonRaysOpacity("0")
+    } 
+     
+    
+  }, [props.pageIndex, moveMoon, moonRaysOpacity])
 
   return (
   <Fragment>
-    <div id="moonRays" style={{marginTop: moveMoon, width: moonSize, height:moonSize}}></div>
-    <div id='moon' style={{marginTop: moveMoon, width: moonSize, height: moonSize}}></div>
-    <div id='photo' style={{ opacity: showPhoto}}></div>
+    <div id="moonRays" style={{marginTop: moveMoon, opacity: moonRaysOpacity}}></div>
+    <div id='moon' style={{marginTop: moveMoon}}></div>
   </Fragment>
   )
 }

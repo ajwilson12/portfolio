@@ -1,0 +1,7 @@
+.mountains {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/mountains.png");
+  z-index: 1;
+}

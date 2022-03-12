@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 import './CurrentPage.css'
 
 
@@ -7,6 +8,8 @@ import './CurrentPage.css'
 import allIcon from '../img/allIcon.png';
 import reactIcon from '../img/reactIcon.png';
 import sassIcon from '../img/sassIcon.png';
+import githubIcon from '../img/githubIcon.svg'
+import emailIcon from '../img/emailIcon.svg'
 import javascriptIcon from '../img/javascriptIcon.png';
 
 
@@ -28,8 +31,12 @@ import javascriptIcon from '../img/javascriptIcon.png';
       if(props.pageIndex === 2) {
         setCurrentPage(
           <div className='aboutContainer' style={{opacity: props.visible, pointerEvents: props.transition}}>
-            <h1>About</h1>
             <h2>I like making things</h2>
+            <div className="textBox">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sit veritatis, corporis unde modi doloremque. Cupiditate officia fugiat odio cumque repudiandae magnam non deleniti rerum assumenda in dolorem quia error, cum optio nemo ut a magni. Tempore amet tenetur autem quia totam, ut eius, voluptatem iusto, esse nemo deserunt eaque?</p><br />
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sit veritatis.</p>
+              <p>Lorem ipsum dolor, sit amet consectetur veritatis.</p>
+            </div>
           </div>
         )
       }
@@ -57,7 +64,7 @@ import javascriptIcon from '../img/javascriptIcon.png';
                 <p className="projectIconText">Kerry & Co</p>
               </div> 
 
-              <div class="break"></div>
+              <div className="break"></div>
              
               <div className='iconContainer'>
                 <img src={allIcon} alt="" />  
@@ -87,8 +94,14 @@ import javascriptIcon from '../img/javascriptIcon.png';
         setCurrentPage(
           <div className='contactContainer' style={{opacity: props.visible, pointerEvents: props.transition}}>
             <h2>Contact</h2>
-            <p>Github</p>
-            <p>Email</p>
+            <div className="contactIconContainer">
+              <div className="contactIcon">
+                <a href="https://github.com/ajwilson12" rel='noreferrer' target="_blank" ><img src={emailIcon} alt="githubIcon" /><p>Email</p></a>
+              </div>
+              <div className="contactIcon">
+              <a href="https://github.com/ajwilson12" rel='noreferrer' target="_blank" ><img src={githubIcon} alt="githubIcon" /><p>GitHub</p></a>
+              </div>
+            </div>
           </div>
         )
       }
