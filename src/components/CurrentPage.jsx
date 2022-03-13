@@ -8,8 +8,13 @@ import './CurrentPage.css'
 import allIcon from '../img/allIcon.png';
 import reactIcon from '../img/reactIcon.png';
 import sassIcon from '../img/sassIcon.png';
+import wordpressIcon from '../img/wordpressIcon.svg';
 import githubIcon from '../img/githubIcon.svg'
 import emailIcon from '../img/emailIcon.svg'
+import pixaBayIcon from '../img/pixaBayIcon.svg'
+import weatherIcon from '../img/weatherIcon.svg'
+import kerryIcon from '../img/kerryIcon.svg'
+import portfolioIcon from '../img/portfolioIcon.svg'
 import javascriptIcon from '../img/javascriptIcon.png';
 
 
@@ -48,19 +53,19 @@ import javascriptIcon from '../img/javascriptIcon.png';
              
              
             <div className="projectIconContainer react sass">
-                <div className="dummyIcon "></div>
+            <img className="projectIcon" src={weatherIcon} alt="weather project icon" />
                 <p className="projectIconText">Weather App</p>
               </div>  
               <div className="projectIconContainer  javascript">
-                <div className="dummyIcon"></div>
+              <img className="projectIcon" src={pixaBayIcon} alt="pixaBay project icon" />
                 <p className="projectIconText">PixaBay Image Search</p>
               </div>  
               <div className="projectIconContainer react sass">
-                <div className="dummyIcon"></div>
+                <img className="projectIcon" src={portfolioIcon} alt="portfolio project icon" />
                 <p className="projectIconText">This Website</p>
               </div>  
               <div className="projectIconContainer wordpress javascript">
-                <div className="dummyIcon "></div>
+                <img className="projectIcon" src={kerryIcon} alt="kerry and co project icon" />
                 <p className="projectIconText">Kerry & Co</p>
               </div> 
 
@@ -79,7 +84,7 @@ import javascriptIcon from '../img/javascriptIcon.png';
                 <p className="iconText  javascript">JAVASCRIPT</p>
               </div>
               <div className='iconContainer'>
-                <img src={javascriptIcon} alt="" />  
+                <img src={wordpressIcon} alt="" />  
                 <p className="iconText  wordpress">WORDPRESS</p>
               </div>
               <div className='iconContainer'>
