@@ -1,0 +1,26 @@
+// @import "~bootstrap/scss/bootstrap";
+
+$headingColor: white;
+
+.pageNotFound {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  z-index: 100;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+
+  h1 {
+    color: $headingColor;
+  }
+  p {
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+
+.spacer {
+  height: 50px;
+}

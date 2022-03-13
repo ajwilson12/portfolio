@@ -21,7 +21,7 @@ function App() {
 
   const handleBackgroundPlay = () => {
     if(backgroundPlay === "paused"){setBackgroundPlay("running")
-      setTimeout(function() {setBackgroundPlay("paused")}, 3000)}
+      setTimeout(function() {setBackgroundPlay("paused")}, 2500)}
       if (backgroundPlay === "running"){
         setBackgroundPlay("running")
       }
@@ -32,7 +32,7 @@ function App() {
   
   function handleLlamaPlay(){
     if(LlamaPlay === 0){setLlamaPlay(1)
-    setTimeout(function() {setLlamaPlay(0)}, 3000)}
+    setTimeout(function() {setLlamaPlay(0)}, 2500)}
     if (LlamaPlay === 1){
       setLlamaPlay(1)
     }
@@ -53,10 +53,11 @@ function App() {
       setTimeout(() => {setTransition("auto")}, 500)
     }
 
+
   function handleDisable() {
     if (disable === false) {
       setDisable(true)
-      setTimeout(function() {setDisable(false)}, 1000)
+      setTimeout(function() {setDisable(false)}, 2500)
     } 
 
   }
@@ -85,23 +86,40 @@ function App() {
     }
   }
 
+  // mobile menu
+  let [mobileMenu, setMobileMenu] = useState(false);
+
+  function handleMobileMenu(onOff) {
+    setTransition('none')
+    setVisible(0)
+      setTimeout(() => {setMobileMenu(onOff)}, 500)
+      setTimeout(() => {setVisible(1)}, 600)
+      setTimeout(() => {setTransition("auto")}, 500)
+      console.log(mobileMenu)
+    }
+
   return (
     <div className="App" onWheel={changePage}>
       
      <Background backgroundPlay={backgroundPlay} LlamaPlay={LlamaPlay} pageIndex={pageIndex}/>
      <Navigation   
+          handleMobileMenu={handleMobileMenu}
           handleLlamaPlay={handleLlamaPlay}
           handleBackgroundPlay={handleBackgroundPlay} 
           NavigateTo={NavigateTo}/>
       <Routes>
+        <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={
         <CurrentPage 
-
+           NavigateTo={NavigateTo}
+           handleMobileMenu={handleMobileMenu}
+           handleLlamaPlay={handleLlamaPlay}
+           handleBackgroundPlay={handleBackgroundPlay} 
+           mobileMenu={mobileMenu}
            pageIndex={pageIndex}
            visible={visible}
            transition={transition}
         />} />
-        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );

@@ -105,7 +105,18 @@ import javascriptIcon from '../img/javascriptIcon.png';
           </div>
         )
       }
-    }, [props.pageIndex, props.visible, props.transition]);
+      if(props.mobileMenu === true) {
+        setCurrentPage(
+          <div className='mobileMenuContainer' style={{opacity: props.visible, pointerEvents: props.transition}}>
+            <p className="navItem" onClick={() => {props.NavigateTo(1); props.handleMobileMenu(false); props.handleBackgroundPlay(); props.handleLlamaPlay();}}>HOME</p>
+            <p className="navItem" onClick={() => {props.NavigateTo(2); props.handleMobileMenu(false); props.handleBackgroundPlay(); props.handleLlamaPlay();}}>ABOUT</p>
+            <p className="navItem" onClick={() => {props.NavigateTo(3); props.handleMobileMenu(false); props.handleBackgroundPlay(); props.handleLlamaPlay();}}>PROJECTS</p>
+            <p className="navItem" onClick={() => {props.NavigateTo(4); props.handleMobileMenu(false); props.handleBackgroundPlay(); props.handleLlamaPlay();}}>CONTACT</p>
+          </div>
+        )
+      } 
+
+    }, [props]);
     
   
     return (

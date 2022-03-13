@@ -8,12 +8,6 @@
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-/* megrim font */
-@import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
-
-/* nunito font */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 .aboutContainer,
 .contactContainer,
 .projectsContainer,
@@ -25,28 +19,8 @@
   color: white;
   opacity: 0;
   transition: all 200ms ease-in-out;
-  width: 60vw;
-}
-
-h1 {
-  font-family: "Megrim", sans-serif;
-  font-weight: 400;
-  font-size: 6rem;
-  text-align: center;
-  margin-bottom: 20px;
-  letter-spacing: 1.1rem;
-}
-h2 {
-  font-family: "Nunito", sans-serif;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 200;
-  color: #02ecd1;
-  letter-spacing: 1rem;
-}
-
-p {
-  font-family: "Nunito", sans-serif;
+  width: 80vw;
+  max-width: 900px;
 }
 
 /* about Page */
@@ -189,4 +163,17 @@ div.dummyIcon:hover {
   background: #02ecd1;
   color: rgb(0, 0, 94);
   font-weight: bolder;
+}
+
+/* mobile menu */
+.mobileMenuContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mobileMenuContainer p {
+  padding: 0.7rem;
 }
