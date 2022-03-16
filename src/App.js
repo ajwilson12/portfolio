@@ -102,7 +102,8 @@ function App() {
     <div className="App" onWheel={changePage}>
       
      <Background backgroundPlay={backgroundPlay} LlamaPlay={LlamaPlay} pageIndex={pageIndex}/>
-     <Navigation   
+     <Navigation  
+          pageIndex={pageIndex} 
           mobileMenu={mobileMenu}
           handleMobileMenu={handleMobileMenu}
           handleLlamaPlay={handleLlamaPlay}

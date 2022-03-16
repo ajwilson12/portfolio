@@ -7,6 +7,7 @@ import TallTrees from './TallTrees';
 import Moon from './Moon';
 import Mountains from './Mountains';
 import NightOverlay from './NightOverlay';
+import Grass from './Grass';
 
 // css
 import './Background.css';
@@ -20,7 +21,7 @@ function Background(props) {
       <Mountains />
       <TallTrees backgroundPlay={props.backgroundPlay}/>
       <NightOverlay  pageIndex={props.pageIndex} />
-      <div className='ground'></div>
+      <Grass backgroundPlay={props.backgroundPlay}></Grass>
     </div>
   );
 }

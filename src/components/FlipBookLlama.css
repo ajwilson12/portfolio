@@ -15,6 +15,7 @@ div {
   grid-row: 1;
   opacity: 0;
   width: 230px;
+  margin-bottom: -20px;
 }
 
 .flip-book img.active {
@@ -24,6 +25,5 @@ div {
 @media screen and (max-width: 750px) {
   .flip-book img {
     width: 180px;
-    margin-bottom: 6px;
   }
 }

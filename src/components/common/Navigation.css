@@ -24,6 +24,8 @@ nav {
   font-family: "Nunito", cursive;
   text-decoration: none;
   cursor: pointer;
+  transition: all 0.6s;
+  transition-property: color;
 }
 
 #navLogo {

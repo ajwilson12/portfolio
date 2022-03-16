@@ -10,10 +10,3 @@
   height: 100vh;
   overflow: hidden;
 }
-
-.ground {
-  height: 500px;
-  width: 100vw;
-  background: #000220;
-  clip-path: ellipse(50% 6% at 50% 100%);
-}
