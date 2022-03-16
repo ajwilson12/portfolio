@@ -14,8 +14,7 @@ import './Background.css';
 function Background(props) {
   return (
     <div className="Background">
-      
-      <Trees backgroundPlay={props.backgroundPlay} pageIndex={props.pageIndex}/>
+      <Trees backgroundPlay={props.backgroundPlay} />
       <FlipBookLlama LlamaPlay={props.LlamaPlay}/>
       <Moon pageIndex={props.pageIndex}/>
       <Mountains />

@@ -29,15 +29,22 @@ nav {
 #navLogo {
   font-family: "Megrim", cursive;
   color: whitesmoke;
-  font-size: 3rem;
+  font-size: 2rem;
   letter-spacing: 0.1rem;
   padding: 40px;
 }
 
 /* mobile navigation */
 
-#mobileMenu img {
-  width: 40px;
+#mobileMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+}
+
+.mobileMenuIcon {
+  max-width: 30px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -46,8 +53,19 @@ nav {
   }
 }
 @media screen and (min-width: 1100px) {
-  .navLinks div {
+  .navLinks #mobileMenu {
     display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .navItem {
+    padding: 20px;
+  }
+
+  #navLogo {
+    padding: 20px;
+    font-size: 1.5rem;
   }
 }
 

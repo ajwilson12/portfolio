@@ -1,6 +1,5 @@
 // @import "~bootstrap/scss/bootstrap";
-
-$headingColor: white;
+@use "./abstracts" as *;
 
 .pageNotFound {
   height: 100vh;

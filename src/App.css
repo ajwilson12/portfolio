@@ -44,3 +44,18 @@ p {
   width: 100vw;
   background: linear-gradient(181.23deg, #0a1027 -15.91%, #0c1835 136.98%);
 }
+
+/* mobile */
+
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  h2 {
+    font-size: 1.1rem;
+    letter-spacing: 0.4rem;
+  }
+}

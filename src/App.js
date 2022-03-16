@@ -103,6 +103,7 @@ function App() {
       
      <Background backgroundPlay={backgroundPlay} LlamaPlay={LlamaPlay} pageIndex={pageIndex}/>
      <Navigation   
+          mobileMenu={mobileMenu}
           handleMobileMenu={handleMobileMenu}
           handleLlamaPlay={handleLlamaPlay}
           handleBackgroundPlay={handleBackgroundPlay} 

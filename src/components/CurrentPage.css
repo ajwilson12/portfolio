@@ -23,6 +23,12 @@
   max-width: 900px;
 }
 
+@media screen and (max-width: 750px) {
+  .projectsContainer {
+    width: 90vw;
+  }
+}
+
 /* about Page */
 
 .aboutContainer h2 {
@@ -58,6 +64,10 @@
   cursor: pointer;
 }
 
+.techIcon {
+  width: 45px;
+}
+
 .iconText {
   margin-top: 5px;
   padding: 5px 15px;
@@ -91,6 +101,7 @@
 
 .projectIcon {
   transition: all 0.2s;
+  width: 60px;
 }
 
 .projectIcon:hover {
@@ -121,6 +132,33 @@
 .break {
   flex-basis: 100%;
   height: 80px;
+}
+
+@media screen and (max-width: 750px) {
+  .projectsContainer h2 {
+    margin-bottom: 60px;
+  }
+  .projectIcon {
+    width: 50px;
+  }
+  .projectIconText {
+    font-size: 0.7rem;
+    padding: 10px 0px;
+  }
+  .iconContainer {
+    width: auto;
+  }
+  .techIcon {
+    width: 40px;
+  }
+  .iconText {
+    font-size: 0.7rem;
+    width: auto;
+  }
+  .break {
+    flex-basis: 100%;
+    height: 60px;
+  }
 }
 
 /* contact page */
@@ -166,7 +204,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  opacity: 0;
+  transition: all 0.4s;
+  background: #040716d0;
 }
 .mobileMenuContainer p {
   padding: 0.7rem;

@@ -4,12 +4,11 @@
 }
 
 .Background {
-  position: fixed;
+  position: absolute;
   display: grid;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  /* background: url("../img/mountains.png"); */
 }
 
 .ground {

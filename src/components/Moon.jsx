@@ -2,24 +2,24 @@ import React, {Fragment, useState, useEffect} from 'react'
 import './Moon.css'
 const Moon = (props) => {
 
-  const [moveMoon, setMoveMoon] = useState("100px")
+  const [moveMoon, setMoveMoon] = useState("180px")
   const [moonRaysOpacity, setMoonRaysOpacity] = useState("0.6")
   
   useEffect(() => {
     if(props.pageIndex === 1) {
-      setMoveMoon("100px")
+      setMoveMoon("180px")
       setMoonRaysOpacity("0.6")
     } 
     if(props.pageIndex === 2) {
-      setMoveMoon("150px")
+      setMoveMoon("260px")
       setMoonRaysOpacity("0.6")
     } 
     if(props.pageIndex === 3) {
-      setMoveMoon("200px")
+      setMoveMoon("360px")
       setMoonRaysOpacity("0.4")
     } 
     if(props.pageIndex === 4) {
-      setMoveMoon("290px")
+      setMoveMoon("460px")
       setMoonRaysOpacity("0")
     } 
      

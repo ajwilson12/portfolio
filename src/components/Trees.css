@@ -18,3 +18,52 @@
     background-position: 0 0;
   }
 }
+
+/* water  */
+
+.waterOverlay {
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  opacity: 0.05;
+  filter: blur(30px);
+  background: linear-gradient(0deg, #f6f6f6, #00042000, #ebebeb, #000c5900);
+  background-size: 800% 800%;
+  -webkit-animation: waterRipples 76s ease infinite;
+  -moz-animation: waterRipples 76s ease infinite;
+  animation: waterRipples 76s ease infinite;
+}
+
+@-webkit-keyframes waterRipples {
+  0% {
+    background-position: 0% 87%;
+  }
+  50% {
+    background-position: 100% 14%;
+  }
+  100% {
+    background-position: 0% 87%;
+  }
+}
+@-moz-keyframes waterRipples {
+  0% {
+    background-position: 0% 87%;
+  }
+  50% {
+    background-position: 100% 14%;
+  }
+  100% {
+    background-position: 0% 87%;
+  }
+}
+@keyframes waterRipples {
+  0% {
+    background-position: 0% 87%;
+  }
+  50% {
+    background-position: 100% 14%;
+  }
+  100% {
+    background-position: 0% 87%;
+  }
+}
