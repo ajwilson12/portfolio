@@ -4,7 +4,7 @@
   /* background: #000220;
   clip-path: ellipse(50% 6% at 50% 100%); */
   background: url("../img/grass2.png") bottom repeat-x;
-  animation: scrollBackGrass 25s linear infinite;
+  animation: scrollBackGrass 15s linear infinite;
   z-index: 10;
 }
 
