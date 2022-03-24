@@ -21,7 +21,7 @@ function App() {
 
   const handleBackgroundPlay = () => {
     if(backgroundPlay === "paused"){setBackgroundPlay("running")
-      setTimeout(function() {setBackgroundPlay("paused")}, 2500)}
+      setTimeout(function() {setBackgroundPlay("paused")}, 10000)}
       if (backgroundPlay === "running"){
         setBackgroundPlay("running")
       }
@@ -32,7 +32,7 @@ function App() {
   
   function handleLlamaPlay(){
     if(LlamaPlay === 0){setLlamaPlay(1)
-    setTimeout(function() {setLlamaPlay(0)}, 2500)}
+    setTimeout(function() {setLlamaPlay(0)}, 10000)}
     if (LlamaPlay === 1){
       setLlamaPlay(1)
     }

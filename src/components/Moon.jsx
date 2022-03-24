@@ -11,15 +11,15 @@ const Moon = (props) => {
       setMoonRaysOpacity("0.6")
     } 
     if(props.pageIndex === 2) {
-      setMoveMoon("260px")
+      setMoveMoon("-20px")
       setMoonRaysOpacity("0.6")
     } 
     if(props.pageIndex === 3) {
-      setMoveMoon("360px")
+      setMoveMoon("-160px")
       setMoonRaysOpacity("0.4")
     } 
     if(props.pageIndex === 4) {
-      setMoveMoon("460px")
+      setMoveMoon("-260px")
       setMoonRaysOpacity("0")
     } 
      
