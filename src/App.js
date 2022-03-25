@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Routes, Route } from "react-router-dom";
 
 
 // components
 import Background from './components/Background';
 import Navigation from './components/common/Navigation';
+import { useMousePosition } from "./components/useMousePosition";
 
 // pages
 import CurrentPage from './components/CurrentPage';
@@ -57,34 +58,50 @@ function App() {
   function handleDisable() {
     if (disable === false) {
       setDisable(true)
-      setTimeout(function() {setDisable(false)}, 2500)
+      setTimeout(function() {setDisable(false)}, 1500)
     } 
-
   }
 
-  function handlePageIndex() {
-    setTransition('none')
-    setVisible(0)
-    setTimeout(() => {setPageIndex(pageIndex += 1)}, 500)
-    setTimeout(() => {setVisible(1)}, 600)
-    setTimeout(() => {setTransition("auto")}, 500)
-    if (pageIndex >= 4) {
-      setTransition('none')
-      setVisible(0)
-      setTimeout(() => {setPageIndex(1)}, 500)
-      setTimeout(() => {setVisible(1)}, 600)
-      setTimeout(() => {setTransition("auto")}, 500)
-    }
-  }
-
-  function changePage() {
+  function handlePageIndex(event) {
     handleDisable();
     if (disable === false) {
-      handlePageIndex(); 
+      handlePageAnimation(); 
       handleBackgroundPlay(); 
       handleLlamaPlay();
+      if (event.deltaY > 0) {
+        setTimeout(() => {setPageIndex(pageIndex += 1)}, 500)
+      } 
+      if (event.deltaY < 0) {
+        setTimeout(() => {setPageIndex(pageIndex -= 1)}, 500)
+      } 
     }
   }
+
+
+  useEffect(() =>{
+    if (pageIndex > 4) {
+      setTimeout(() => {setPageIndex(1)}, 500)
+    }
+    if (pageIndex < 1) {
+      setTimeout(() => {setPageIndex(4)}, 500)
+    }
+  }, [pageIndex])
+
+
+
+  // track mouse position
+  useMousePosition();
+  
+  
+
+  // make next page fade in
+  function handlePageAnimation() {
+    setTransition('none')
+    setVisible(0)
+    setTimeout(() => {setVisible(1)}, 600)
+    setTimeout(() => {setTransition("auto")}, 500)
+  }
+
 
   // mobile menu
   let [mobileMenu, setMobileMenu] = useState(false);
@@ -99,8 +116,7 @@ function App() {
     }
 
   return (
-    <div className="App" onWheel={changePage}>
-      
+    <div className="App" onWheel={handlePageIndex}> 
      <Background backgroundPlay={backgroundPlay} LlamaPlay={LlamaPlay} pageIndex={pageIndex}/>
      <Navigation  
           pageIndex={pageIndex} 

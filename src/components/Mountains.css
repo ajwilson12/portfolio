@@ -1,7 +1,7 @@
 .mountains {
   width: 100%;
   min-height: 1080px;
-  background: url("../img/mountains2.png") bottom repeat-x;
+  background: url("../img/mountains2.png") repeat-x;
   z-index: 1;
 }
 

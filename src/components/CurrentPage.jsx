@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom'
 import './CurrentPage.css'
-
 
 // icons
 
@@ -21,7 +19,6 @@ import javascriptIcon from '../img/javascriptIcon.svg';
   function CurrentPage(props) {
 
     const [currentPage, setCurrentPage] = useState(null);
-    
     useEffect(() => {
 
       if(props.pageIndex === 1) { 

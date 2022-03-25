@@ -10,9 +10,12 @@ import LlamaSlide6 from '../img/llama_6.png'
 import LlamaSlide7 from '../img/llama_7.png'
 import LlamaSlide8 from '../img/llama_8.png'
 
+import { useMousePosition } from './useMousePosition'
 
 function FlipBookLlama(props) {
-
+  
+  const position = useMousePosition();
+  
   const {LlamaPlay} = props
   const images = [
     LlamaSlide1,
@@ -25,7 +28,7 @@ function FlipBookLlama(props) {
     LlamaSlide8
   ];
   return (
-    <div>
+    <div className="llamaWrapper"  style={{marginLeft: position.x / 60 + 'px'}}>
       <FlipBook images={images} LlamaPlay={LlamaPlay} speed="120" />
     </div>
   );

@@ -8,7 +8,8 @@
   z-index: 4;
   transform: scale(0.8);
   transform-origin: bottom;
-  transition: all 8s ease-in-out;
+  transition: margin-left 0.1s;
+  transition: transform 8s ease-in-out;
 }
 
 @keyframes scrollBack {

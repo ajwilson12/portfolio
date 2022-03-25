@@ -9,16 +9,21 @@ import Mountains from './Mountains';
 import NightOverlay from './NightOverlay';
 import Grass from './Grass';
 
+
 // css
 import './Background.css';
 
 function Background(props) {
 
-  const [zoom, setZoom] = useState(("scale(1)"))
+  const [zoom, setZoom] = useState(("scale(0.9)"))
+
+  
 
   useEffect(() => {
+
+
     if(props.pageIndex === 1) {
-      setZoom("scale(1)")
+      setZoom("scale(0.9)")
     } 
     if(props.pageIndex === 2) {
       setZoom("scale(0.8)")
