@@ -13,6 +13,7 @@ import PageNotFound from "./components/pages/PageNotFound";
 
 // css
 import './App.css';
+import Stars from './components/Stars';
 
 function App() {
 
@@ -118,6 +119,7 @@ function App() {
   return (
     <div className="App" onWheel={handlePageIndex}> 
      <Background backgroundPlay={backgroundPlay} LlamaPlay={LlamaPlay} pageIndex={pageIndex}/>
+     <Stars />
      <Navigation  
           pageIndex={pageIndex} 
           mobileMenu={mobileMenu}
