@@ -18,6 +18,22 @@ import javascriptIcon from '../img/javascriptIcon.svg';
 
   function CurrentPage(props) {
 
+    const [reactProject, setReactProject] = useState(false)
+    const [javascriptProject, setJavascriptProject] = useState(false)
+    const [wordpressProject, setWordpressProject] = useState(false)
+    const [sassProject, setSassProject] = useState(false)
+    const [allProject, setAllProject] = useState(true)
+
+
+    function toggleTech(value1, value2, value3, value4, value5) {
+      setReactProject(value1)
+      setJavascriptProject(value2)
+      setWordpressProject(value3)
+      setSassProject(value4)
+      setAllProject(value5)
+    }
+
+
     const [currentPage, setCurrentPage] = useState(null);
     useEffect(() => {
 
@@ -47,46 +63,44 @@ import javascriptIcon from '../img/javascriptIcon.svg';
           <div className='projectsContainer' style={{opacity: props.visible, pointerEvents: props.transition}}>
             <h2>Projects</h2>
             <div className="iconWrapper" >
-             
-             
-            <div className="projectIconContainer react sass">
+            <div className="projectIconContainer react sass" style={sassProject || reactProject || allProject ? {opacity: 1} : {opacity: 0, display: "none"}}>
             <img className="projectIcon" src={weatherIcon} alt="weather project icon" />
-                <p className="projectIconText">Weather App</p>
+                <p className="projectIconText">ezWeather</p>
               </div>  
-              <div className="projectIconContainer  javascript">
+              <div className="projectIconContainer  javascript" style={javascriptProject || allProject ? {opacity: 1} : {opacity: 0, display: "none"}}>
               <img className="projectIcon" src={pixaBayIcon} alt="pixaBay project icon" />
                 <p className="projectIconText">PixaBay Image Search</p>
               </div>  
-              <div className="projectIconContainer react sass">
+              <div className="projectIconContainer react sass" style={sassProject || reactProject || allProject ? {opacity: 1} : {opacity: 0, display: "none"}}>
                 <img className="projectIcon" src={portfolioIcon} alt="portfolio project icon" />
                 <p className="projectIconText">This Website</p>
               </div>  
-              <div className="projectIconContainer wordpress javascript">
+              <div className="projectIconContainer wordpress javascript" style={wordpressProject || javascriptProject || allProject ? {opacity: 1} : {opacity: 0, display: "none"}}>
                 <img className="projectIcon" src={kerryIcon} alt="kerry and co project icon" />
                 <p className="projectIconText">Kerry & Co</p>
               </div> 
 
               <div className="break"></div>
              
-              <div className='iconContainer'>
+              <div className='iconContainer' onClick={() => toggleTech(false, false, false, false, true)}>
                 <img className="techIcon" src={allIcon} alt="all" />  
-                <p className="iconText">ALL</p>
+                <p className={allProject ? "iconText highlighted" : "iconText"}>ALL</p>
               </div>
-              <div className='iconContainer '>
+              <div className='iconContainer ' onClick={() => toggleTech(true, false, false, false, false)}>
                 <img className="techIcon" src={reactIcon} alt="react" />  
-                <p className="iconText react">REACT</p>
+                <p className={reactProject ? "iconText react highlighted" : "iconText react"} >REACT</p>
               </div>
-              <div className='iconContainer'>
+              <div className='iconContainer' onClick={() => toggleTech(false, true, false, false, false)}>
                 <img className="techIcon" src={javascriptIcon} alt="javascript" />  
-                <p className="iconText  javascript">JAVASCRIPT</p>
+                <p className={javascriptProject ? "iconText javascript highlighted" : "iconText javascript"}>JAVASCRIPT</p>
               </div>
-              <div className='iconContainer'>
+              <div className='iconContainer' onClick={() => toggleTech(false, false, true, false, false)}>
                 <img className="techIcon" src={wordpressIcon} alt="wordpress" />  
-                <p className="iconText  wordpress">WORDPRESS</p>
+                <p className={wordpressProject ? "iconText wordpress highlighted" : "iconText wordpress"}>WORDPRESS</p>
               </div>
-              <div className='iconContainer'>
+              <div className='iconContainer'onClick={() => toggleTech(false, false, false, true, false)}>
                 <img className="techIcon" src={sassIcon} alt="sass" />  
-                <p className="iconText sass">SASS</p>
+                <p className={sassProject ? "iconText sass highlighted" : "iconText sass"}>SASS</p>
               </div> 
             </div>
           </div>
@@ -118,7 +132,7 @@ import javascriptIcon from '../img/javascriptIcon.svg';
         )
       } 
 
-    }, [props]);
+    }, [props, reactProject, sassProject, wordpressProject, javascriptProject, allProject]);
     
   
     return (

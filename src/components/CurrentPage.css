@@ -66,6 +66,12 @@
   width: 45px;
 }
 
+.highlighted {
+  background: #02ecd1e5;
+  color: rgb(0, 0, 94);
+  font-weight: bolder;
+}
+
 .iconText {
   margin-top: 5px;
   padding: 5px 15px;
@@ -85,6 +91,7 @@
 .projectIconContainer {
   cursor: pointer;
   align-items: center;
+  transition: opacity 0.3s;
 }
 
 .projectIconText {
