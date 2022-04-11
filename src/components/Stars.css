@@ -16,7 +16,7 @@
 }
 
 .spaceOverlay {
-  background: linear-gradient(181.23deg, #0a1027 -15.91%, transparent 136.98%);
+  background: linear-gradient(181.23deg, transparent -15.91%, #0c1835 136.98%);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -36,12 +36,12 @@ display:block;
 }
 
 .stars {
-background:  #0c1835 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+background:  #0a1027 url('../img/stars.png') repeat top center;
 z-index:0;
 }
 
 .twinkling{
-background:transparent url('../img/twinkle.png') repeat top center;
+background:transparent url('../img/twinkle2.png') repeat top center;
 z-index:1;
 
 -moz-animation:move-twink-back 800s linear infinite;
