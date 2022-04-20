@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button'
 import '../../sass/main.scss'
 import { Link } from 'react-router-dom';
 function PageNotFound() {
@@ -9,7 +8,7 @@ function PageNotFound() {
       <h2>Page not found</h2>
       <div className="spacer"></div>
       <Link to="/">
-        <Button variant="primary"><p>Back</p></Button>
+        <button variant="primary"><p>Back</p></button>
       </Link>
     </div>
   )

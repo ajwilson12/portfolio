@@ -16,7 +16,6 @@
   position: absolute;
   display: grid;
   width: 500%;
-  transform: scale(0.8);
-  transform-origin: bottom;
+  transform-origin: bottom center;
   transition: all 8s ease-in-out;
 }

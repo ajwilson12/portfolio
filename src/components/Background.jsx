@@ -15,7 +15,7 @@ import './Background.css';
 
 function Background(props) {
 
-  const [zoom, setZoom] = useState(("scale(0.9)"))
+  const [zoom, setZoom] = useState(("scale(0.7)"))
 
   
 
@@ -23,16 +23,16 @@ function Background(props) {
 
 
     if(props.pageIndex === 1) {
-      setZoom("scale(0.9)")
+      setZoom("scale(0.7)")
     } 
     if(props.pageIndex === 2) {
-      setZoom("scale(0.8)")
-    } 
-    if(props.pageIndex === 3) {
       setZoom("scale(0.6)")
     } 
-    if(props.pageIndex === 4) {
+    if(props.pageIndex === 3) {
       setZoom("scale(0.5)")
+    } 
+    if(props.pageIndex === 4) {
+      setZoom("scale(0.4)")
     } 
      
     

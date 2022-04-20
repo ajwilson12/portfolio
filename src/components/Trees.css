@@ -1,10 +1,9 @@
 #trees {
-  margin-bottom: -180px;
   grid-row: 2;
   grid-column: 1;
   height: 100%;
-  background: url("../img/forest1961-959.png") repeat-x;
-  animation: scroll 360s linear infinite;
+  background: url("../img/midnight-lake.png") repeat-x;
+  animation: scroll 560s linear infinite;
   z-index: 2;
   /* animation-play-state: paused; */
 }
@@ -22,15 +21,15 @@
 
 .waterOverlay {
   width: 100%;
-  height: 120px;
+  height: 220px;
   bottom: 0;
   opacity: 0.05;
-  filter: blur(30px);
+  filter: blur(40px);
   background: linear-gradient(0deg, #f6f6f6, #00042000, #ebebeb, #000c5900);
   background-size: 800% 800%;
-  -webkit-animation: waterRipples 76s ease infinite;
-  -moz-animation: waterRipples 76s ease infinite;
-  animation: waterRipples 76s ease infinite;
+  -webkit-animation: waterRipples 176s ease infinite;
+  -moz-animation: waterRipples 176s ease infinite;
+  animation: waterRipples 176s ease infinite;
 }
 
 @-webkit-keyframes waterRipples {

@@ -1,18 +1,16 @@
 .grass {
   height: 100%;
   width: 100%;
-  /* background: #000220;
-  clip-path: ellipse(50% 6% at 50% 100%); */
-  background: url("../img/grass.png") bottom repeat-x;
-  animation: scrollBackGrass 7s linear infinite;
-  z-index: 10;
+  background: url("../img/midnight-foreground-bank.png") repeat-x;
+  animation: scrollBackGrass 50s linear infinite;
+  z-index: 2;
 }
 
 @keyframes scrollBackGrass {
   from {
-    background-position: 0 bottom;
+    background-position: 0 center;
   }
   to {
-    background-position: 245px bottom;
+    background-position:  1920px center;
   }
 }

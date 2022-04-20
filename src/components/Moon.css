@@ -1,6 +1,6 @@
 #moon {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   background-color: aliceblue;
   border-radius: 50%;
   grid-column: 1;
@@ -8,7 +8,7 @@
   justify-self: center;
   align-self: start;
   z-index: 1;
-  transition: all 12s ease-in-out;
+  transition: all 8s ease-in-out;
 }
 
 #moonRays {

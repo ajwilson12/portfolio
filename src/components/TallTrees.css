@@ -2,7 +2,7 @@
   position: absolute;
   height: 200%;
   width: 500%;
-  background: url("../img/tallTree3.png") repeat-x;
+  background: url("../img/midnight-front-trees.png") repeat-x;
   animation: scrollBack 40s linear infinite;
   /* animation-play-state: paused; */
   z-index: 4;
@@ -17,6 +17,6 @@
     background-position: 0 bottom;
   }
   to {
-    background-position: 2154px bottom;
+    background-position: 1920px bottom;
   }
 }

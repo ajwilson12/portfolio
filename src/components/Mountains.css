@@ -1,12 +1,8 @@
 .mountains {
   width: 100%;
   min-height: 1080px;
-  background: url("../img/mountains2.png") repeat-x;
+  background: url("../img/midnight-mountains.png") repeat-x;
+  background-position: 200px;
   z-index: 1;
 }
 
-@media screen and (max-width: 750px) {
-  .mountains {
-    background: url("../img/mountains3.png") bottom repeat-x;
-  }
-}
