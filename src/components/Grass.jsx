@@ -7,7 +7,7 @@ const Grass = (props) => {
   const position = useMousePosition();
 
   return (
-      <div className='grass' style={{animationPlayState: backgroundPlay,  marginLeft: position.x / 90 + 'px' }}></div>
+      <div className='grass' style={{animationPlayState: backgroundPlay,  marginLeft: position.x / -80 + 'px' }}></div>
   )
 }
 

@@ -10,7 +10,7 @@ const Trees = (props) => {
 
   return (
     <Fragment>
-      <div id='trees' style={{animationPlayState: backgroundPlay, marginLeft: position.x / 50 + 'px', marginBottom: position.y / 60 + 'px'}}></div>
+      <div id='trees' style={{animationPlayState: backgroundPlay, marginLeft: position.x / 40 + 'px', marginBottom: position.y / 60 + 'px'}}></div>
       <div className='waterOverlay'></div>\
     </Fragment>
   )

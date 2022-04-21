@@ -8,7 +8,7 @@ const Mountains = () => {
 
   
   return (
-    <div className="mountains"  style={{marginLeft: position.x / 30 + 'px', paddingBottom: position.y / 50 + 'px'}} ></div>
+    <div className="mountains"  style={{marginLeft: position.x / 30 + 'px', marginBottom: position.y / 40 + 'px'}} ></div>
   )
 }
 

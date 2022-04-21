@@ -1,0 +1,24 @@
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  height: 2.2%;
+  z-index: 100;
+  width: 100%;
+  bottom: 0;
+  background-color: #020d1b;
+  color: #07306A;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  transition: all ease-in-out 0.2s;
+  overflow: hidden;
+}
+
+.footer p {
+  margin: 0px 40px;
+}
+
+.footer:hover{
+  color: white;
+}

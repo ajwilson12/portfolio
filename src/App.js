@@ -6,6 +6,8 @@ import { Routes, Route } from "react-router-dom";
 import Background from './components/Background';
 import Navigation from './components/common/Navigation';
 import { useMousePosition } from "./components/useMousePosition";
+import Stars from './components/Stars';
+import Footer from './components/common/Footer';
 
 // pages
 import CurrentPage from './components/CurrentPage';
@@ -13,7 +15,6 @@ import PageNotFound from "./components/pages/PageNotFound";
 
 // css
 import './App.css';
-import Stars from './components/Stars';
 
 function App() {
 
@@ -120,6 +121,7 @@ function App() {
     <div className="App" onWheel={handlePageIndex}> 
      <Background backgroundPlay={backgroundPlay} LlamaPlay={LlamaPlay} pageIndex={pageIndex}/>
      <Stars />
+     <Footer />
      <Navigation  
           pageIndex={pageIndex} 
           mobileMenu={mobileMenu}
@@ -141,7 +143,7 @@ function App() {
            transition={transition}
         />} />
       </Routes>
-    </div>
+    </div> 
   );
 }
 

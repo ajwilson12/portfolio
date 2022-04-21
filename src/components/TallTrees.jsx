@@ -8,7 +8,7 @@ const TallTrees = (props) => {
   const position = useMousePosition();
 
   return (
-      <div id='foreground' style={{animationPlayState: backgroundPlay, transform: zoom, marginLeft: position.x / 60 + 'px' }}></div>
+      <div id='foreground' style={{animationPlayState: backgroundPlay, transform: zoom, marginLeft: position.x / -30 + 'px' }}></div>
   )
 }
 
