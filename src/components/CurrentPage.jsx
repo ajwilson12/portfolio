@@ -14,10 +14,10 @@ import wordpressIcon from '../img/wordpressIcon.svg';
 import javascriptIcon from '../img/javascriptIcon.svg';
 import githubIcon from '../img/githubIcon.svg'
 import emailIcon from '../img/emailIcon.svg'
-import pixaBayIcon from '../img/pixaBayIcon.svg'
-import weatherIcon from '../img/weatherIcon.svg'
-import kerryIcon from '../img/kerryIcon.svg'
-import portfolioIcon from '../img/portfolioIcon.svg'
+// import pixaBayIcon from '../img/pixaBayIcon.svg'
+// import weatherIcon from '../img/weatherIcon.svg'
+// import kerryIcon from '../img/kerryIcon.svg'
+// import portfolioIcon from '../img/portfolioIcon.svg'
 
 
   function CurrentPage(props) {
