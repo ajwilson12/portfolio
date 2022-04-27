@@ -28,7 +28,7 @@ function FlipBookLlama(props) {
     LlamaSlide8
   ];
   return (
-    <div className="llamaWrapper"  style={{marginLeft: position.x / -60 + 'px'}}>
+    <div className="llamaWrapper"  style={{marginLeft: position.x / -60 + 'px', marginBottom: position.y / 80 + 'px'}}>
       <FlipBook images={images} LlamaPlay={LlamaPlay} speed="120" />
     </div>
   );

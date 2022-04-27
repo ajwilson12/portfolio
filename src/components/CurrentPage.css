@@ -5,6 +5,12 @@
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
 }
+.aboutContainer h2,
+.projectsContainer h2,
+.contactContainer h2 {
+  padding: 1.5rem;
+  font-size: 1.4rem;
+}
 
 .aboutContainer,
 .contactContainer,
@@ -29,14 +35,17 @@
 
 /* about Page */
 
-.aboutContainer h2 {
-  padding: 1.5rem;
-}
-
 .textBox {
   text-align: center;
   line-height: 1.8rem;
   margin: 1rem;
+  margin: auto;
+  max-width: 800px;
+}
+
+.projectsContainer .textBox {
+  max-width: 600px;
+  margin-top: 2rem;
 }
 
 /* project Page */
@@ -46,52 +55,65 @@
   flex-direction: column;
 }
 
-.projectsContainer h2 {
-  margin-bottom: 80px;
-}
-
-.iconWrapper {
+.techIconWrapper {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   text-align: center;
   justify-content: space-evenly;
+  padding: 20px 0;
+  margin-bottom: 20px;
 }
 
 .iconContainer {
   cursor: pointer;
+  clip-path: circle();
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
 }
 
 .techIcon {
-  width: 45px;
+  width: 40px;
 }
 
 .highlighted {
-  background: #02ecd1e5;
-  color: rgb(0, 0, 94);
-  font-weight: bolder;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); 
+  box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%);
+  background-color: rgb(228 228 228 / 10%); 
+  transform: scale(1.1);
 }
 
 .iconText {
-  margin-top: 5px;
-  padding: 5px 15px;
-  width: 100px;
-  transition: all 0.2s;
+  font-size: 0.7rem;
+  margin-top: 15px;
   font-family: "Megrim", sans-serif;
+  letter-spacing: 0.2rem;
 }
 
-.iconContainer:hover .iconText {
-  background: #02ecd1e5;
-  color: rgb(0, 0, 94);
-  font-weight: bolder;
+.iconContainer:hover {
+  transform: scale(1.1);
 }
 
-/* project icons */
+/* project Cards */
+
+
+.projectsIconWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
 
 .projectIconContainer {
   cursor: pointer;
   align-items: center;
   transition: opacity 0.3s;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .projectIconText {
@@ -100,8 +122,8 @@
   transition: all 0.2s;
   font-family: "Nunito", sans-serif;
   font-weight: 200;
-  height: 40px;
   font-size: 0.8rem;
+  text-align: center;
 }
 
 .projectIcon {
@@ -113,36 +135,12 @@
   transform: scale(1.1);
 }
 
-.react:hover ~ .iconContainer p.react {
-  background: #02ecd1e5;
-  color: rgb(0, 0, 94);
-  font-weight: bolder;
-}
-.javascript:hover ~ .iconContainer p.javascript {
-  background: #02ecd1e5;
-  color: rgb(0, 0, 94);
-  font-weight: bolder;
-}
-.sass:hover ~ .iconContainer p.sass {
-  background: #02ecd1e5;
-  color: rgb(0, 0, 94);
-  font-weight: bolder;
-}
-.wordpress:hover ~ .iconContainer p.wordpress {
-  background: #02ecd1e5;
-  color: rgb(0, 0, 94);
-  font-weight: bolder;
-}
-
 .break {
   flex-basis: 100%;
   height: 80px;
 }
 
 @media screen and (max-width: 750px) {
-  .projectsContainer h2 {
-    margin-bottom: 60px;
-  }
   .projectIcon {
     width: 50px;
   }
@@ -155,10 +153,6 @@
   }
   .techIcon {
     width: 40px;
-  }
-  .iconText {
-    font-size: 0.7rem;
-    width: auto;
   }
   .break {
     flex-basis: 100%;
@@ -173,10 +167,6 @@
   margin: auto;
   width: 100px;
   justify-content: space-evenly;
-}
-
-.contactContainer h2 {
-  margin-bottom: 50px;
 }
 
 .contactIcon {

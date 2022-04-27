@@ -1,0 +1,59 @@
+/* cards */
+
+.cardWrapper {
+  padding: 0 20px;
+}
+
+.card {
+  height: 340px;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); 
+  box-shadow: 0px 5px 7px 5px rgb(0 0 0 / 15%);
+  background-color: rgb(228 228 228 / 10%); 
+  transition: all ease-in-out 0.2s;
+}
+
+.cardImage {
+  height: 45%;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card h3 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+
+.cardIcons img {
+  width: 30px;
+}
+
+.cardContent {
+  padding: 10px 30px 20px 30px;
+}
+
+.card p {
+  font-size: 0.8rem;
+  font-weight: 100;
+  height: 100px;
+}
+
+.cardLink p {
+  color: #02ecd1;
+  padding-top: 10px;
+}
+/* 
+.card:hover {
+  transform: scale(1.05);
+} */
