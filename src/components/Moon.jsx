@@ -28,8 +28,8 @@ const Moon = (props) => {
 
   return (
   <Fragment>
-    <div id="moonRays" style={{marginTop: moveMoon, opacity: moonRaysOpacity}}></div>
-    <div id='moon' style={{marginTop: moveMoon}}></div>
+    <div id="moonRays" style={{paddingTop: moveMoon, opacity: moonRaysOpacity}}></div>
+    <div id='moon' style={{paddingTop: moveMoon}}></div>
   </Fragment>
   )
 }
