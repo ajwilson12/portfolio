@@ -8,7 +8,7 @@
   justify-self: center;
   align-self: start;
   z-index: 1;
-  transition: padding-top 8s ease-in-out;
+  transition: margin-top 8s ease-in-out;
 }
 
 #moonRays {
