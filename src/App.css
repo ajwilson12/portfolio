@@ -49,9 +49,6 @@ p {
 .App {
   width: 100vw;
   overflow: hidden;
-  min-height: 100vh;
-  min-height: stretch;
-  min-height: -webkit-fill-available;
 }
 
 /* mobile */

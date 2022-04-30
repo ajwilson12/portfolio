@@ -14,6 +14,7 @@ import wordpressIcon from '../img/wordpressIcon.svg';
 import javascriptIcon from '../img/javascriptIcon.svg';
 import githubIcon from '../img/githubIcon.svg'
 import emailIcon from '../img/emailIcon.svg'
+import useWindowDimensions from "./GetDimensions";
 // import pixaBayIcon from '../img/pixaBayIcon.svg'
 // import weatherIcon from '../img/weatherIcon.svg'
 // import kerryIcon from '../img/kerryIcon.svg'
@@ -21,6 +22,9 @@ import emailIcon from '../img/emailIcon.svg'
 
 
   function CurrentPage(props) {
+
+      // get window height
+  const { height } = useWindowDimensions();
 
     const [reactProject, setReactProject] = useState(false)
     const [javascriptProject, setJavascriptProject] = useState(false)
@@ -186,7 +190,7 @@ import emailIcon from '../img/emailIcon.svg'
     
   
     return (
-      <div id="pageContainer">
+      <div id="pageContainer" style={{height: {height}}}>
         {currentPage}
       </div>
     )
