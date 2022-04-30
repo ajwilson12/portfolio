@@ -8,7 +8,7 @@ import Navigation from './components/common/Navigation';
 import { useMousePosition } from "./components/useMousePosition";
 import Stars from './components/Stars';
 import Footer from './components/common/Footer';
-import useWindowDimensions from './components/GetDimensions';
+// import useWindowDimensions from './components/GetDimensions';
 
 // pages
 import CurrentPage from './components/CurrentPage';
@@ -21,7 +21,7 @@ import './App.css';
 function App() {
 
   // get window height
-  const { width } = useWindowDimensions();
+  // const { width } = useWindowDimensions();
 
   // background functions
 
@@ -121,7 +121,7 @@ function App() {
     }
 
   return (
-    <div className="App" onWheel={handlePageIndex} style={{height:{width}}}>
+    <div className="App" onWheel={handlePageIndex}>
      <Background backgroundPlay={backgroundPlay} LlamaPlay={LlamaPlay} pageIndex={pageIndex}/>
      <Stars />
      <Footer />
