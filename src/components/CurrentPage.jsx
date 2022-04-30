@@ -27,10 +27,79 @@ import portfolioIcon from '../img/portfolioIcon.svg'
     const [wordpressProject, setWordpressProject] = useState(false)
     const [sassProject, setSassProject] = useState(false)
     const [allProject, setAllProject] = useState(true)
-    
+    const [currentPage, setCurrentPage] = useState(null);
     
     // add more projects via this array
-    const projectArray = 
+      const [filteredProjects, setFilteredProjects] = useState([
+        {
+          id: 1,
+          background:'#25013B',  
+          icon: pixaBayIcon, 
+          title:'PixaBay', 
+          techIcon: javascriptIcon, 
+          techIcon2: null, 
+          text:'test text',
+          link:'GitHub →',
+        },
+        {
+          id: 2,
+          background:'#030C27',  
+          icon: kerryIcon, 
+          title:'Kerry & Co.', 
+          techIcon: wordpressIcon, 
+          techIcon2: javascriptIcon,
+          text:'test text',
+          link:'GitHub →',
+        },
+        {
+          id: 3,
+          background:'#030C27',  
+          icon: portfolioIcon, 
+          title:'Portfolio', 
+          techIcon: reactIcon, 
+          techIcon2: sassIcon,
+          text:'test text',
+          link:'GitHub →',
+        },
+        {
+          id: 4,
+          background:'#030C27',  
+          icon: weatherIcon, 
+          title:'ezWeather', 
+          techIcon: reactIcon,
+          techIcon2: sassIcon,
+          text:'test text',
+          link:'GitHub →',
+        }
+      ])
+      
+      function filterProject(test, techIcon, value1, value2, value3, value4, value5) {
+        setReactProject(value1)
+        setJavascriptProject(value2)
+        setWordpressProject(value3)
+        setSassProject(value4)
+        setAllProject(value5)
+        setFilteredProjects(test.filter(obj =>{
+          const res = obj.techIcon === techIcon
+          const res2 = obj.techIcon2 === techIcon
+          const result = res + res2
+          return result
+        }))
+      }
+
+      function allProjects(test) {
+        setReactProject(false)
+        setJavascriptProject(false)
+        setWordpressProject(false)
+        setSassProject(false)
+        setAllProject(true)
+        setFilteredProjects(test)
+      }
+    
+    // use effect to change page via pageIndex state
+    useEffect(() => {
+
+      const projectArray = 
       [
         {
           id: 1,
@@ -73,36 +142,6 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           link:'GitHub →',
         }
       ]
-
-      const [filteredProjects, setFilteredProjects] = useState(projectArray)
-      
-      function filterProject(techIcon, value1, value2, value3, value4, value5) {
-        setReactProject(value1)
-        setJavascriptProject(value2)
-        setWordpressProject(value3)
-        setSassProject(value4)
-        setAllProject(value5)
-        setFilteredProjects(projectArray.filter(obj =>{
-          const res = obj.techIcon === techIcon
-          const res2 = obj.techIcon2 === techIcon
-          const result = res + res2
-          return result
-        }))
-      }
-
-      function allProjects() {
-        setReactProject(false)
-        setJavascriptProject(false)
-        setWordpressProject(false)
-        setSassProject(false)
-        setAllProject(true)
-        setFilteredProjects(projectArray)
-      }
-    
-    const [currentPage, setCurrentPage] = useState(null);
-    
-    // use effect to change page via pageIndex state
-    useEffect(() => {
   
       const responsive = {
         desktop: {
@@ -147,35 +186,35 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           <div className='projectsContainer' style={{opacity: props.visible, pointerEvents: props.transition}}>
             <h2>All Projects</h2>
             <div className="techIconWrapper" >
-             <div onClick={() => allProjects()}>
+             <div onClick={() => allProjects(projectArray)}>
                 <div className={allProject ? "iconContainer highlighted" : "iconContainer"}>
                   <img className="techIcon" src={allIcon} alt="all" />  
                 </div>
                   <p className="iconText">SEE ALL</p>
              </div>
 
-             <div onClick={() => filterProject(reactIcon, true, false, false, false, false)}>
+             <div onClick={() => filterProject(projectArray, reactIcon, true, false, false, false, false)}>
                 <div className={reactProject ? "iconContainer highlighted" : "iconContainer"}>
                   <img className="techIcon" src={reactIcon} alt="react" />  
                 </div>
                   <p className="iconText react" >REACT</p>
              </div>
 
-             <div onClick={() => filterProject(javascriptIcon, false, true, false, false, false)}>
+             <div onClick={() => filterProject(projectArray, javascriptIcon, false, true, false, false, false)}>
                 <div className={javascriptProject ? "iconContainer highlighted" : "iconContainer"}>
                   <img className="techIcon" src={javascriptIcon} alt="javascript" />  
                 </div>
                   <p className="iconText javascript">JAVASCRIPT</p>
              </div>
 
-             <div onClick={() => filterProject(wordpressIcon, false, false, true, false, false)}>
+             <div onClick={() => filterProject(projectArray, wordpressIcon, false, false, true, false, false)}>
                 <div className={wordpressProject ? "iconContainer highlighted" : "iconContainer"}>
                   <img className="techIcon" src={wordpressIcon} alt="wordpress" />  
                 </div>
                   <p className="iconText wordpress">WORDPRESS</p>
              </div>
 
-             <div onClick={() => filterProject(sassIcon, false, false, false, true, false)}>
+             <div onClick={() => filterProject(projectArray, sassIcon, false, false, false, true, false)}>
                 <div className={sassProject ? "iconContainer highlighted" : "iconContainer"}>
                   <img className="techIcon" src={sassIcon} alt="sass" />  
                 </div> 
