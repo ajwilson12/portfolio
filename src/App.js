@@ -117,7 +117,6 @@ function App() {
       setTimeout(() => {setMobileMenu(onOff)}, 500)
       setTimeout(() => {setVisible(1)}, 600)
       setTimeout(() => {setTransition("auto")}, 500)
-      console.log(mobileMenu)
     }
 
   return (

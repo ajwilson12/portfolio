@@ -1,25 +1,29 @@
 import React from 'react'
 import './Card.css'
-import pixaBayIcon from '../img/pixaBayIcon.svg'
-import javascriptIcon from '../img/javascriptIcon.svg';
 
-const Card = () => {
+const Card = ({ background, icon, title, techIcon, techIcon2, text, link }) => {
   return (
     
     <div className="cardWrapper">
     <div className="card">
-      <div className="cardImage" style={{backgroundColor: '#25013B'}}>
+      <div className="cardImage" style={{backgroundColor: `${background}`}}>
         
-        <img src={pixaBayIcon} alt="icon" />
+        <img src={icon} alt="icon" />
         
       </div>  
       <div className="cardContent">
         <div className="cardHeading">
-        <h3>PixaBay</h3>
-          <div className="cardIcons"><img src={javascriptIcon} alt="icon" /></div>
+        <h3>{title}</h3>
+          <div className="cardIcons">
+            <img src={techIcon} alt="tech icon" />
+            {(techIcon2 === null)
+            ? ""
+            : <img src={techIcon2} alt="tech icon" />
+            }
+          </div>
         </div>
-        <div className="cardText"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque natus distinctio, praesentium eligendi fugit error accusantium.</p></div>
-        <div className="cardLink"><p>GitHub →</p></div>
+        <div className="cardText"><p>{text}</p></div>
+        <div className="cardLink"><p>{link}</p></div>
     </div>
   </div>
     </div>

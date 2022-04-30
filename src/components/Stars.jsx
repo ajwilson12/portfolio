@@ -6,8 +6,8 @@ const Stars = () => {
   return (
     <Fragment>
       <div className="spaceOverlay"></div>
-      <div class="stars"></div>
-      <div class="twinkling"></div>
+      <div className="stars"></div>
+      <div className="twinkling"></div>
     </Fragment>
   )
 }
