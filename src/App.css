@@ -47,6 +47,9 @@ p {
 }
 
 .App {
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
   width: 100vw;
   /* background: linear-gradient(181.23deg, #0a1027 -15.91%, #0c1835 136.98%); */
 }
