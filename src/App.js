@@ -8,6 +8,7 @@ import Navigation from './components/common/Navigation';
 import { useMousePosition } from "./components/useMousePosition";
 import Stars from './components/Stars';
 import Footer from './components/common/Footer';
+import useWindowDimensions from './components/GetDimensions';
 
 // pages
 import CurrentPage from './components/CurrentPage';
@@ -16,7 +17,11 @@ import PageNotFound from "./components/pages/PageNotFound";
 // css
 import './App.css';
 
+
 function App() {
+
+    // get window height
+    const { width } = useWindowDimensions();
 
   // background functions
 
@@ -94,8 +99,6 @@ function App() {
   // track mouse position
   useMousePosition();
   
-  
-
   // make next page fade in
   function handlePageAnimation() {
     setTransition('none')
@@ -118,7 +121,7 @@ function App() {
     }
 
   return (
-    <div className="App" onWheel={handlePageIndex}> 
+    <div className="App" onWheel={handlePageIndex} style={{height:{width}}}> 
      <Background backgroundPlay={backgroundPlay} LlamaPlay={LlamaPlay} pageIndex={pageIndex}/>
      <Stars />
      <Footer />
