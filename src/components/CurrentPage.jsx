@@ -19,7 +19,6 @@ import weatherIcon from '../img/weatherIcon.svg'
 import kerryIcon from '../img/kerryIcon.svg'
 import portfolioIcon from '../img/portfolioIcon.svg'
 
-import Tilt from 'react-parallax-tilt';
 
   function CurrentPage(props) {
   
@@ -164,11 +163,8 @@ import Tilt from 'react-parallax-tilt';
        
         setCurrentPage(
           <div className='titleContainer' style={{opacity: props.visible, pointerEvents: props.transition}}>
-            <Tilt>
             <h1>Hi, I'm Arran</h1>
             <h2>web designer</h2>
-
-            </Tilt>
           </div>
         )
       }
