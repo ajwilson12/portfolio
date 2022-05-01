@@ -184,7 +184,7 @@ import portfolioIcon from '../img/portfolioIcon.svg'
       if(props.pageIndex === 3) {
         setCurrentPage(
           <div className='projectsContainer' style={{opacity: props.visible, pointerEvents: props.transition}}>
-            <h2>All Projects</h2>
+            <h2>Projects</h2>
             <div className="techIconWrapper" >
              <div onClick={() => allProjects(projectArray)}>
                 <div className={allProject ? "iconContainer highlighted" : "iconContainer"}>
