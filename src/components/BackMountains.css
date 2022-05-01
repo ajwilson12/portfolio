@@ -1,7 +1,7 @@
-.mountains {
+.backMountains {
   width: 100%;
   min-height: 1080px;
-  background: url("../img/midMountains.png") repeat-x;
+  background: url("../img/backMountains.png") repeat-x;
   background-position: 200px;
   z-index: 1;
 }
