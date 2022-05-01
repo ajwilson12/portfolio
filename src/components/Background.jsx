@@ -10,7 +10,6 @@ import BackMountains from './BackMountains';
 import NightOverlay from './NightOverlay';
 import Grass from './Grass';
 
-
 // css
 import './Background.css';
 
