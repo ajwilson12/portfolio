@@ -40,7 +40,7 @@
 }
 
 .cardContent {
-  padding: 10px 30px 20px 30px;
+  padding: 10px 10% 10% 10%;
 }
 
 .card p {
@@ -51,7 +51,7 @@
 
 .cardLink p {
   color: #02ecd1;
-  padding-top: 10px;
+  margin-top: 6px;
 }
 /* 
 .card:hover {

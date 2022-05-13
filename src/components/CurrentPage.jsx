@@ -21,7 +21,7 @@ import portfolioIcon from '../img/portfolioIcon.svg'
 
 
   function CurrentPage(props) {
-  
+    
     const [reactProject, setReactProject] = useState(false)
     const [javascriptProject, setJavascriptProject] = useState(false)
     const [wordpressProject, setWordpressProject] = useState(false)
@@ -38,8 +38,9 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           title:'PixaBay', 
           techIcon: javascriptIcon, 
           techIcon2: null, 
-          text:'test text',
-          link:'GitHub →',
+          text:
+            'An image search application written in vanilla JavaScript that fetches and displays images from the PixaBay API.',
+          link:<a rel="noreferrer" target="_blank"  href="https://adorable-pixie-10ed86.netlify.app/"><p>See Project →</p></a>,
         },
         {
           id: 2,
@@ -48,8 +49,9 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           title:'Kerry & Co.', 
           techIcon: wordpressIcon, 
           techIcon2: javascriptIcon,
-          text:'test text',
-          link:'GitHub →',
+          text:          
+            'A live Website made for a client. Features include a form selection panel written in JavaScript that connects users with the form best suited to their request.',
+          link:<a rel="noreferrer" target="_blank"  href="https://kerrycodesign.com/"><p>kerrycodesign.com →</p></a>,
         },
         {
           id: 3,
@@ -58,8 +60,9 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           title:'Portfolio', 
           techIcon: reactIcon, 
           techIcon2: sassIcon,
-          text:'test text',
-          link:'GitHub →',
+          text:
+          'My portfolio website is created with React JavaScript. My goal was to build a site that is simple, memorable and shows my design style.',
+          link:<a rel="noreferrer" target="_blank"  href="https://github.com/ajwilson12/portfolio"><p>GitHub →</p></a>,
         },
         {
           id: 4,
@@ -69,7 +72,7 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           techIcon: reactIcon,
           techIcon2: sassIcon,
           text:'test text',
-          link:'GitHub →',
+          link:<p>GitHub →</p>,
         }
       ])
       
@@ -108,8 +111,9 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           title:'PixaBay', 
           techIcon: javascriptIcon, 
           techIcon2: null, 
-          text:'test text',
-          link:'GitHub →',
+          text:
+            'An image search application written in vanilla JavaScript that fetches and displays images from the PixaBay API.',
+          link:<a rel="noreferrer" target="_blank"  href="https://adorable-pixie-10ed86.netlify.app/"><p>See Project →</p></a>,
         },
         {
           id: 2,
@@ -118,8 +122,9 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           title:'Kerry & Co.', 
           techIcon: wordpressIcon, 
           techIcon2: javascriptIcon,
-          text:'test text',
-          link:'GitHub →',
+          text:          
+            'A live Website made for a client. Features include a form selection panel written in JavaScript that connects users with the form best suited to their request.',
+          link:<a rel="noreferrer" target="_blank"  href="https://kerrycodesign.com/"><p>kerrycodesign.com →</p></a>,
         },
         {
           id: 3,
@@ -128,8 +133,9 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           title:'Portfolio', 
           techIcon: reactIcon, 
           techIcon2: sassIcon,
-          text:'test text',
-          link:'GitHub →',
+          text:
+          'My portfolio website is created with React JavaScript. My goal was to build a site that is simple, memorable and shows my design style.',
+          link:<a rel="noreferrer" target="_blank"  href="https://github.com/ajwilson12/portfolio"><p>GitHub →</p></a>,
         },
         {
           id: 4,
@@ -139,7 +145,7 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           techIcon: reactIcon,
           techIcon2: sassIcon,
           text:'test text',
-          link:'GitHub →',
+          link:<p>GitHub →</p>,
         }
       ]
   
@@ -173,10 +179,10 @@ import portfolioIcon from '../img/portfolioIcon.svg'
           <div className='aboutContainer' style={{opacity: props.visible, pointerEvents: props.transition}}>
             <h2>I like making things</h2>
             <div className="textBox">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sit veritatis, corporis unde modi doloremque. Cupiditate officia fugiat odio cumque amet tenetur autem quia totam, ut eius, voluptatem iusto, esse nemo deserunt eaque?</p>
+              <p>Hi, I'm Arran. Making creative and visually striking websites is my idea of a good time! I'm a front end focused developer who is passionate about crafting memorable interactive experiences using the browser as a canvas and modern JavaScript technologies as my brush.</p>
               <br />
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sit veritatis.</p>
-              <p>Lorem ipsum dolor, sit amet consectetur veritatis.</p>
+              <p>If you want to hear more, Check out my resume or shoot me a message via email.</p>
+              <p>I look forward to working with you.</p>
             </div>
           </div>
         )

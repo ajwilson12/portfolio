@@ -22,7 +22,7 @@ const Card = ({ background, icon, title, techIcon, techIcon2, text, link }) => {
             </div>
           </div>
           <div className="cardText"><p>{text}</p></div>
-          <div className="cardLink"><p>{link}</p></div>
+          <div className="cardLink">{link}</div>
         </div>
       </div>
     </div>
